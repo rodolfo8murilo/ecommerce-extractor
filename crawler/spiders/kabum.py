@@ -9,6 +9,7 @@ class KabumSpider(Spider):
     BASE_URL_API = "https://servicespub.prod.api.aws.grupokabum.com.br/catalog/v2/products-by-category/"
     BASE_NAME = "Kabum"
     BASE_URL = "https://www.kabum.com.br"
+    
     CATEGORIES = [
         "hardware",
         "perifericos",
