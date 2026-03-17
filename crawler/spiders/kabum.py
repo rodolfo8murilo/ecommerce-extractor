@@ -10,9 +10,9 @@ class KabumSpider(Spider):
     BASE_NAME = "Kabum"
     BASE_URL = "https://www.kabum.com.br"
     CATEGORIES = [
-        #"hardware",
+        "hardware",
         "perifericos",
-        #"computadores"
+        "computadores"
     ]
 
     async def start(self):
