@@ -1,0 +1,17 @@
+[project]
+name = "ecommerce-extractor"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Rodolfo Murilo Barbosa Moura",email = "rodolfo8murilo@gmail.com"}
+]
+requires-python = ">=3.12"
+dependencies = [
+    "scrapy (>=2.14.2,<3.0.0)",
+    "pydantic (>=2.12.5,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
