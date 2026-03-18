@@ -42,7 +42,7 @@ Before running the crawler, activate the Poetry virtual environment:
 poetry env activate
 ```
 
-### Step 6: Run the Crawler Crawler
+### Step 6: Run the Crawler
 
 Once the environment is activated, you can run the Kabum crawler using the following command:
 ```bash
