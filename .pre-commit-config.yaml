@@ -1,0 +1,6 @@
+repos:
+  - repo: https://github.com/PyCQA/pylint
+    rev: v3.2.6
+    hooks:
+      - id: pylint
+        args: ["--disable=C0114,C0115,C0116"]
