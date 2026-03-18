@@ -9,7 +9,7 @@ This project utilizes Poetry for dependency management and virtual environment m
 - Python 3.8 or higher is recommended.
 - Ensure you have pre-commit installed:
 ```bash
-sudo pip install pre-commit
+sudo apt install pre-commit
 ```
 
 ### Step 1: Clone the Repository
