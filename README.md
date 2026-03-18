@@ -7,6 +7,10 @@ This project utilizes Poetry for dependency management and virtual environment m
 ### Prerequisites
 - Ensure you have [Poetry](https://python-poetry.org/docs/#installation) installed on your system.
 - Python 3.8 or higher is recommended.
+- Ensure you have pre-commit installed:
+```bash
+sudo pip install pre-commit
+```
 
 ### Step 1: Clone the Repository
 
@@ -41,8 +45,11 @@ Before running the crawler, activate the Poetry virtual environment:
 ```bash
 poetry env activate
 ```
-
-### Step 6: Run the Crawler
+### Step 6: Install pre-commit hooks
+```bash
+pre-commit install
+```
+### Step 7: Run the Crawler
 
 Once the environment is activated, you can run the Kabum crawler using the following command:
 ```bash
