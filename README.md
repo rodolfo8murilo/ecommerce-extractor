@@ -21,32 +21,32 @@ Change to the directory of the cloned repository:
 ```bash
 cd ecommerce-extractor
 ```
+### Step 3: Activate the Poetry Environment
 
-### Step 3: Install Dependencies
+```bash
+poetry config virtualenvs.in-project true
+```
+This will create the .venv/ folder.
+
+### Step 4: Install Dependencies
 
 Use Poetry to install the required dependencies:
 ```bash
 poetry install
 ```
 
-### Step 4: Activate the Poetry Environment
+### Step 5: Activate the Poetry Environment
 
 Before running the crawler, activate the Poetry virtual environment:
 ```bash
-poetry shell
+poetry activate env
 ```
 
-### Step 5: Run the Kabum Crawler
+### Step 6: Run the Crawler Crawler
 
 Once the environment is activated, you can run the Kabum crawler using the following command:
 ```bash
-python kabum_crawler.py
-```
-
-### Troubleshooting
-- If you encounter any issues, ensure that your Poetry version is up to date by running:
-```bash
-poetry self update
+poetry run scrapy crawl kabum
 ```
 
 ---
