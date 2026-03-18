@@ -6,6 +6,7 @@ authors = [
     {name = "Rodolfo Murilo Barbosa Moura",email = "rodolfo8murilo@gmail.com"}
 ]
 requires-python = ">=3.12"
+
 dependencies = [
     "scrapy (>=2.14.2,<3.0.0)",
     "pydantic (>=2.12.5,<3.0.0)"
