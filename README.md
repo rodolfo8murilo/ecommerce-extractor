@@ -39,7 +39,7 @@ poetry install
 
 Before running the crawler, activate the Poetry virtual environment:
 ```bash
-poetry activate env
+poetry env activate
 ```
 
 ### Step 6: Run the Crawler Crawler
