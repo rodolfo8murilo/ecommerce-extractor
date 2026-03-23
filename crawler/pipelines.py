@@ -11,13 +11,13 @@ logger = logging.getLogger(__name__)
 
 
 class CleanDataPipeline:
-    def process_item(self, item, spider):  # pylint: disable=unused-argument
+    def process_item(self, item):
         item["product_name"] = item["product_name"].strip()
         return item
 
 
 class ValidatePipeline:
-    def process_item(self, item, spider):  # pylint: disable=unused-argument
+    def process_item(self, item):
         if not item.get("product_id"):
             logger.info("Missing product_id")
             raise DropItem("Missing product_id")
@@ -45,10 +45,10 @@ class DuplicatesPipeline:
     def __init__(self):
         self.repo = None
 
-    def open_spider(self, spider):  # pylint: disable=unused-argument
+    def open_spider(self):
         self.repo = ProductRepository()
 
-    def process_item(self, item, spider):  # pylint: disable=unused-argument
+    def process_item(self, item):
         if self.repo.get_product_by_id(item["product_id"]) is not None:
             logger.info("Duplicate item")
             raise DropItem("Duplicate item")
@@ -60,12 +60,12 @@ class SaveToDatabasePipeline:
     def __init__(self):
         self.repo = None
 
-    def open_spider(self, spider):  # pylint: disable=unused-argument
+    def open_spider(self):
         self.repo = ProductRepository()
 
-    def process_item(self, item, spider):  # pylint: disable=unused-argument
+    def process_item(self, item):
         self.repo.insert_product(item)
         return item
 
-    def close_spider(self, spider):  # pylint: disable=unused-argument
+    def close_spider(self):
         self.repo.close()
