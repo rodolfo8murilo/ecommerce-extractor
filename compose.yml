@@ -1,0 +1,6 @@
+services:
+  scrapy:
+    build: .
+    container_name: ecommerce_extractor
+    volumes:
+      - .:/app
