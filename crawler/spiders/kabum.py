@@ -8,8 +8,8 @@ class KabumSpider(Spider):
     name = "kabum"
     allowed_domains = ["servicespub.prod.api.aws.grupokabum.com.br"]
     BASE_URL_API = (
-        "https://servicespub.prod.api.aws.grupokabum.com.br/'"
-        "'catalog/v2/products-by-category/"
+        "https://servicespub.prod.api.aws.grupokabum.com.br"
+        "/catalog/v2/products-by-category/"
     )
     BASE_NAME = "Kabum"
     BASE_URL = "https://www.kabum.com.br"
