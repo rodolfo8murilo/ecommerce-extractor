@@ -85,7 +85,7 @@ docker compose build
 ### 2) Run a spider
 To check which spiders are available in the project:
 ```bash
-docker compose run --rm scrapy crawl kabum
+docker compose run --rm --remove-orphans scrapy crawl kabum -a pages=3
 ```
 
 ---
