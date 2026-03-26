@@ -58,13 +58,12 @@ poetry run scrapy crawl kabum -a pages=<number_pages>
 
 # Running with Docker
 
-# E-commerce Extractor
 
 A web scraping project built with **Scrapy**, containerized with **Docker Compose**, designed to extract product data from e-commerce websites such as **KaBuM**.
 
 ---
 
-## 📦 Requirements
+### 📦 Requirements
 
 Before running the project, make sure you have installed:
 
@@ -75,7 +74,7 @@ Before running the project, make sure you have installed:
 
 ---
 
-## 🚀 How to Run the Project with Docker Compose
+### 🚀 How to Run the Project with Docker Compose
 
 ### 1) Build the Docker image
 Run the following command to build the project image:
