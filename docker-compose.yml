@@ -1,0 +1,8 @@
+services:
+  scrapy:
+    build: .
+    container_name: ecommerce-extractor
+    working_dir: /app
+    volumes:
+      - .:/app
+      - /app/.venv

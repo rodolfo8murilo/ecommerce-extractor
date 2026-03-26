@@ -53,141 +53,42 @@ pre-commit install
 
 Once the environment is activated, you can run the Kabum crawler using the following command:
 ```bash
-poetry run scrapy crawl kabum
+poetry run scrapy crawl kabum -a pages=<number_pages>
 ```
 
 # Running with Docker
 
-You can also run the crawler using Docker without installing dependencies locally.
+# E-commerce Extractor
 
-## Prerequisites
-
-Make sure Docker is installed on your machine.
-
-### Check if Docker is already installed
-
-```bash
-docker --version
-```
-
-If the command is not found, install Docker using the following steps (Ubuntu/Debian):
-
-### Install Docker
-
-```bash
-sudo apt update
-sudo apt install docker.io
-```
-
-### Enable and start Docker
-
-```bash
-sudo systemctl enable docker
-sudo systemctl start docker
-```
-
-### Allow your user to run Docker without sudo
-
-```bash
-sudo usermod -aG docker $USER
-```
-
-After that, restart your session or run:
-
-```bash
-newgrp docker
-```
-
-### Test Docker installation
-
-```bash
-docker run hello-world
-```
-
-If you see the hello-world message, Docker is working correctly.
+A web scraping project built with **Scrapy**, containerized with **Docker Compose**, designed to extract product data from e-commerce websites such as **KaBuM**.
 
 ---
 
-## Step 1: Build the Docker Image
+## 📦 Requirements
 
-Inside the project root directory, run:
+Before running the project, make sure you have installed:
 
-```bash
-docker build -t scrapy-app .
-```
+- [Docker](https://www.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
 
-This will create a Docker image named `scrapy-app`.
+> You do **not** need to install Python or Poetry locally if you are using Docker.
 
 ---
 
-## Step 2: Run the Kabum Crawler
+## 🚀 How to Run the Project with Docker Compose
 
-To run the Kabum spider:
-
+### 1) Build the Docker image
+Run the following command to build the project image:
 ```bash
-docker run -v $(pwd):/app scrapy-app kabum
+docker compose build
+```
+
+### 2) Run a spider
+To check which spiders are available in the project:
+```bash
+docker compose run --rm scrapy crawl kabum
 ```
 
 ---
 
-## Step 3: Run with Custom Number of Pages
-
-To pass arguments to the spider, use the `-a` flag:
-
-```bash
-docker run -v $(pwd):/app scrapy-app kabum -a pages=3
-```
-
-This will run the Kabum spider scraping 3 pages.
-
----
-
-## Why use `-v $(pwd):/app`?
-
-This mounts your current project directory into the Docker container so that files such as:
-
-- `products.db`
-- exported files
-- logs
-
-are saved in your local project folder instead of being lost when the container stops.
-
----
-
-## Example Commands
-
-### Run default crawl
-```bash
-docker run -v $(pwd):/app scrapy-app kabum
-```
-
-### Run scraping 5 pages
-```bash
-docker run -v $(pwd):/app scrapy-app kabum -a pages=5
-```
-
-### Run another spider
-```bash
-docker run -v $(pwd):/app scrapy-app spider_name
-```
-
----
-
-## Useful Docker Commands
-
-### View running containers
-```bash
-docker ps
-```
-
-### View all containers
-```bash
-docker ps -a
-```
-
-### View Docker images
-```bash
-docker images
-```
----
 Follow these instructions to set up your environment and run the Kabum crawler successfully!
