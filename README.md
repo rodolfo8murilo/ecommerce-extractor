@@ -90,4 +90,4 @@ docker compose run --rm scrapy crawl kabum
 
 ---
 
-Follow these instructions to set up your environment and run the Kabum crawler successfully!
+Follow these instructions to set up your environment and run the spiders crawler successfully!
