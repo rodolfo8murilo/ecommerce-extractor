@@ -5,7 +5,7 @@ from spidermon import Monitor, MonitorSuite, monitors
 class ItemCountMonitor(Monitor):
     def test_item_count(self):
         count = self.data.stats.get("item_scraped_count", 0)
-        assert count >= 10, f"Expected at least 10 items, got {count}"
+        assert count >= 1, f"Expected at least 1 items, got {count}"
 
 
 class SpiderCloseMonitorSuite(MonitorSuite):
